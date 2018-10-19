@@ -1,10 +1,24 @@
 <template>
   <div>
+    <common-header></common-header>
+
     <nuxt/>
   </div>
 </template>
 
+<script>
+  import commonHeader from '~/components/commonHeader'
+
+
+  export default {
+    components: {
+      commonHeader
+    }
+  }
+</script>
+
 <style>
+
 html {
   font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;
