@@ -1,29 +1,65 @@
 <template>
-  <section class="container">
+  <div class="container">
     <div>
       <top></top>
+      <about></about>
 
+      <seminar v-observe-visibility="visibilityChanged"></seminar>
+      <product></product>
+
+
+      <div class="icon-area" v-observe-visibility="visibilityChanged">
+        <transition name="icon">
+          sssssssss    <div v-show="isVisible" class="icon">🍣</div>
+
+        </transition>
+      </div>
 
 
     </div>
-  </section>
+  </div>
 </template>
 
 <script>
-import AppLogo from '~/components/AppLogo.vue'
 import top from '~/components/top'
+import about from '~/components/about'
+import seminar from '~/components/seminar'
+import product from '~/components/product'
+
+import Vue from 'vue'
+import { ObserveVisibility } from 'vue-observe-visibility'
+
+Vue.use(ObserveVisibility)
+
+
 
 
 export default {
   components: {
-    top
+    top,
+    about,
+    seminar,
+    product
+  },
+  fetch ({store}) {
+    store.dispatch('resetMenu');
+  },
+  data() {
+    return {
+      isVisible: false
+    }
+  },
+  methods: {
+    visibilityChanged(isVisible) {
+      this.isVisible = isVisible
+    }
   }
 }
 </script>
 
-<style>
+<style lang="scss">
 .container {
-  min-height: 100vh;
+  //min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;

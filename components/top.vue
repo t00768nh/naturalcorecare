@@ -1,6 +1,7 @@
 <template>
-  <sectiopn class="tt">
-  </sectiopn>
+  <div class="tt">
+
+  </div>
 </template>
 
 <script>
@@ -10,13 +11,29 @@
   }
 </script>
 
-<style  scoped>
-.tt{
-  background: url('~assets/top.jpg');
-  background-size: cover;
+<style  lang="scss" scoped>
+  @import "../assets/mq.scss";
+
+  .tt{
+  background: url('~assets/img/top.jpg');
   width: 100vw;
-  height: 100vh;
+  //height: 600px;
   display: block;
+    height: 0;
+    /* 表示画像の高さ ÷ 表示画像の幅 × 100 */
+    padding-top: 63.04%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    @include mq(mobile){
+     width: 100%;
+    }
+    @include mq(tablet){
+      //min-height: 80vh;
+      //height: 500px;
+    }
 
 
 }

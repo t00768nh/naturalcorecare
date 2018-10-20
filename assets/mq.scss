@@ -1,0 +1,22 @@
+$breakpoint-mobile: 768px !default;
+$breakpoint-tablet: 1023px !default;
+$breakpoint-desktop: 1215px !default;
+$breakpoint-widescreen: 1407px !default;
+
+$breakpoints: (
+'mobile': 'screen and (max-width: 768px)',
+'tablet': 'screen and (max-width: 1023px)',
+'desktop': 'screen and (max-width: 1215px)',
+'widscreen': 'screen and (max-width: 1407px)',
+) !default;
+@mixin mq($breakpoint: md) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}
+
+@mixin mqc($custom) {
+    @media  screen and (max-width: $custom){
+        @content;
+    }
+}

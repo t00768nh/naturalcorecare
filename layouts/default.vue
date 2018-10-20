@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="ld">
     <common-header></common-header>
 
     <nuxt/>
@@ -9,7 +9,6 @@
 <script>
   import commonHeader from '~/components/commonHeader'
 
-
   export default {
     components: {
       commonHeader
@@ -17,10 +16,16 @@
   }
 </script>
 
-<style>
+<style lang="scss">
+  @import url('https://fonts.googleapis.com/css?family=M+PLUS+1p');
+
+
+  .ld{
+    height: 100%;
+  }
 
 html {
-  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: 'M PLUS 1p', sans-serif;
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
@@ -28,6 +33,7 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+  height: 100%;
 }
 
 *, *:before, *:after {
