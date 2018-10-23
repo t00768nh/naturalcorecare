@@ -15,10 +15,11 @@
   @import "../assets/mq.scss";
 
   .tt{
-  background: url('~assets/img/top.jpg');
-  width: 100vw;
+    background: url('~assets/img/top.jpg');
+
+    width: 100vw;
   //height: 600px;
-  display: block;
+    display: block;
     height: 0;
     /* 表示画像の高さ ÷ 表示画像の幅 × 100 */
     padding-top: 63.04%;
@@ -29,6 +30,10 @@
 
     @include mq(mobile){
      width: 100%;
+      background: url('~assets/img/top-m.jpg');
+      padding-top: 129%;
+      background-size: cover;
+
     }
     @include mq(tablet){
       //min-height: 80vh;

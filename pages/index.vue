@@ -35,6 +35,7 @@ Vue.use(ObserveVisibility)
 
 
 export default {
+  transition: 'fade',
   components: {
     top,
     about,
@@ -85,6 +86,17 @@ export default {
 
 .links {
   padding-top: 15px;
+}
+
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.4s;
+}
+
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+  background: white;
+
 }
 </style>
 
