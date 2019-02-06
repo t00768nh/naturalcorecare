@@ -75,7 +75,6 @@
       }
 
     }
-
     &-header {
       &_l {
         text-align: center;

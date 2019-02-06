@@ -10,11 +10,10 @@
 
       <div class="icon-area" v-observe-visibility="visibilityChanged">
         <transition name="icon">
-          sssssssss    <div v-show="isVisible" class="icon">🍣</div>
+          <div v-show="isVisible" class="icon">🍣</div>
 
         </transition>
       </div>
-
 
     </div>
   </div>
@@ -25,13 +24,10 @@ import top from '~/components/top'
 import about from '~/components/about'
 import seminar from '~/components/seminar'
 import product from '~/components/product'
-
 import Vue from 'vue'
-import { ObserveVisibility } from 'vue-observe-visibility'
+import VueObserveVisibility from 'vue-observe-visibility'
 
-Vue.use(ObserveVisibility)
-
-
+Vue.use(VueObserveVisibility)
 
 
 export default {
@@ -47,13 +43,15 @@ export default {
   },
   data() {
     return {
-      isVisible: false
+      isVisible: false,
+      showt: true
     }
   },
   methods: {
-    visibilityChanged(isVisible) {
+    visibilityChanged (isVisible, entry) {
       this.isVisible = isVisible
-    }
+      console.log(entry)
+    },
   }
 }
 </script>

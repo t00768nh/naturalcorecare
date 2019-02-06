@@ -1,7 +1,6 @@
 <template>
   <div class="ld">
     <common-header></common-header>
-
     <nuxt/>
   </div>
 </template>

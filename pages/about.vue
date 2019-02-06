@@ -6,8 +6,6 @@
 
     <img class="ta-about_photo" src="~assets/img/be.jpg"/>
 
-
-
       <div class="ta-mission">
         <img class="ta-mission_svg" src="~assets/img/mission.svg"/>
 
